@@ -1,0 +1,6 @@
+{
+    "scripts": {
+        "server": "node server/index.js",
+        "client": "cd client && npm start"
+    }
+}
