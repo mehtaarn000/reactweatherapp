@@ -1,50 +1,10 @@
 import React from 'react';
-import "./Home.css"
 
-class Form extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {value: ''};
-    
-        this.handleChange = this.handleChange.bind(this);
-    }
-    
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
-    
-    render() {
-        return (
-            <div className="center-block">
-                <input type="text" value={this.state.value} onChange={this.handleChange} />
-                <button onClick={() => {this.props.handleSubmit(this.state.value); this.setState({value: ''})}}></button>
-            </div>
-        );
-    }
-}
+// Components
+import Form from "./Form"
+import Display from "./Display"
 
-class Display extends React.Component {
-    render() {
-        if (this.props.error !== "") {
-            return <div><h1>{this.props.error}</h1></div>
-        }
-
-        else if (this.props.weather === "" && this.props.temp === 0) {
-            return <div></div>
-        } 
-        
-        else {
-            return (
-                <div>
-                    <h1>Weather is {this.props.weather}</h1>
-                    <h1>Temp is {this.props.temp}</h1>
-                </div>
-            )
-        } 
-    }
-}
-
-function Home() {
+export function Home() {
     const [weatherVal, setWeatherVal] = React.useState("")
     const [errorVal, setErrorVal] = React.useState("")
     const [tempVal, setTempVal] = React.useState(0)
@@ -78,5 +38,3 @@ function Home() {
         </div>
     )
 }
-
-export default Home;
