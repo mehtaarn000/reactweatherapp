@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Form.css"
+import "../css/Display.css"
 
 export default class Form extends React.Component {
     constructor(props) {
@@ -15,7 +15,7 @@ export default class Form extends React.Component {
     
     render() {
         return (
-            <div className="center-block">
+            <div>
                 <input type="text" value={this.state.value} onChange={this.handleChange} />
                 <button onClick={() => {this.props.handleSubmit(this.state.value); this.setState({value: ''})}}></button>
             </div>

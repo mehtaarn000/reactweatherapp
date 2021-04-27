@@ -1,0 +1,69 @@
+.container{
+    overflow: hidden;
+    z-index: 10;
+    position: absolute;
+    margin: 150px auto;
+    height: 90px;
+    width: 300px;
+    background-color: #F17022;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+}
+
+.sun{
+    z-index: 1000;
+    font-size: 15px !important;
+}
+
+.Condition{
+    z-index: 1000;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    left: 10px;  
+    bottom: -1px;
+}
+
+.Temp{
+    z-index: 1000;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    left: 10px;
+    bottom: 15px;
+}
+
+#F{
+    z-index: 1000;
+    font-family: "Roboto",sans-serif;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+
+.Time{
+    z-index: 1000;
+    position: absolute;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    right: 20px;
+    top: 10px;
+}
+
+.locationIcon{
+    z-index: 1000;
+    font-size: 10px !important;
+}
+
+.Location{
+    z-index: 1000;
+    position: absolute;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    right: 20px;
+    bottom: 5px;
+}

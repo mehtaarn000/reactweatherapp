@@ -4,7 +4,7 @@ import React from 'react';
 import Form from "./Form"
 import Display from "./Display"
 
-export function Home() {
+export default function Home() {
     const [weatherVal, setWeatherVal] = React.useState("")
     const [errorVal, setErrorVal] = React.useState("")
     const [tempVal, setTempVal] = React.useState(0)
