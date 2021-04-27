@@ -8,6 +8,7 @@ export default function Home() {
     const [weatherVal, setWeatherVal] = React.useState("")
     const [errorVal, setErrorVal] = React.useState("")
     const [tempVal, setTempVal] = React.useState(0)
+    const [place, setPlace] = React.useState("")
 
     async function handleSubmit(event) {
         let response = await fetch("/api?city=" + event)
@@ -24,17 +25,19 @@ export default function Home() {
             setErrorVal(checkerr)
             setWeatherVal("")
             setTempVal(0)
+            setPlace("")
         } else {
             setErrorVal("")
             setWeatherVal(jsonData["current"]["condition"]["text"])
             setTempVal(jsonData["current"]["temp_f"])
+            setPlace(jsonData["location"]["name"] + ", " + jsonData["location"]["region"])
         }
     }
 
     return (
         <div>
             <Form handleSubmit={handleSubmit}></Form>
-            <Display error={errorVal} weather={weatherVal} temp={tempVal} ></Display>
+            <Display error={errorVal} weather={weatherVal} temp={tempVal} place={place}></Display>
         </div>
     )
 }
